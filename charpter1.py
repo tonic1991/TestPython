@@ -1,3 +1,6 @@
+import sys
+
+
 def foo():
     """this is a practice code"""
     return True
@@ -6,8 +9,8 @@ def foo():
 heStr = "hello123"
 print(heStr[2: 5])
 
-heheStr = 'hello123'
-print(heheStr * 4)
+heHeStr = 'hello123'
+print(heHeStr * 4)
 
 # a = input("please input a string")
 # help(input)
@@ -62,11 +65,25 @@ for i in squared:
 
 
 try:
-    handle = open('123.txt', 'r')
+    handle = open('readme.md', 'r')
     for eachLine in handle:
         print(eachLine)
     handle.close()
 except IOError as e:
     print('file open error', e)
 
-print("class")
+print("class test")
+
+
+class FooClass(object):
+    """ my first class"""
+    version = 0.1     # class data
+    def __init__(self, nm = 'John Joe'):
+        self.name = nm
+        print('create a class instance for', nm)
+        print('my name is', self.__class__.__name__)
+
+cIns = FooClass('tonic')
+print(cIns.version)
+
+print(sys.platform)
