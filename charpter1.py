@@ -63,7 +63,6 @@ squared = [x ** 2 for x in range(4)]
 for i in squared:
     print(i)
 
-
 try:
     handle = open('readme.md', 'r')
     for eachLine in handle:
@@ -77,13 +76,22 @@ print("class test")
 
 class FooClass(object):
     """ my first class"""
-    version = 0.1     # class data
-    def __init__(self, nm = 'John Joe'):
+    version = 0.1  # class data
+
+    def __init__(self, nm='John Joe'):
         self.name = nm
         print('create a class instance for', nm)
         print('my name is', self.__class__.__name__)
+
 
 cIns = FooClass('tonic')
 print(cIns.version)
 
 print(sys.platform)
+
+print(dir(cIns))
+
+print(str(counter))
+
+if __name__ == '__main__':
+    print('chapter1 is main!!!')
